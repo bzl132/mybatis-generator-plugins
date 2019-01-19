@@ -18,7 +18,7 @@ public class TestGenerator {
     @Before
     public void before() {
         //读取mybatis参数
-        configFile = new File("D:\\Project\\Activiti\\mybatisgeneratorplugins\\src\\main\\resources\\generator-mybatis.xml");
+        configFile = new File("D:\\Project\\Activiti\\mybatisgeneratorplugins\\mybatisGeneratorPlugins\\src\\main\\resources\\generator-mybatis.xml");
 
 //        configFile = new File("/Users/zhangsiyuan/Documents/MybatisFun/Mybatis-Chapter9-GeneratorPlugin/src/main/resources/mybatisConfig.xml");
     }
