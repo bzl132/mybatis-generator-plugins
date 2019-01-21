@@ -25,9 +25,9 @@
     </licenses>
     <scm>
         <tag>master</tag>
-        <url>git@github.com:bzl132/mybatis-generator-plugins.git</url>
-        <connection>scm:git:git@github.com:bzl132/mybatis-generator-plugins.git</connection>
-        <developerConnection>scm:git:git@github.com:bzl132/mybatis-generator-plugins.git</developerConnection>
+        <url>git@github.com:bzl132/b-mybatis-generator-plugins.git</url>
+        <connection>scm:git:git@github.com:bzl132/b-mybatis-generator-plugins.git</connection>
+        <developerConnection>scm:git:git@github.com:bzl132/b-mybatis-generator-plugins.git</developerConnection>
     </scm>
     <developers>
         <developer>
