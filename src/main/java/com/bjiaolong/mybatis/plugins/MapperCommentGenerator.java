@@ -13,11 +13,11 @@ import java.util.Properties;
 import java.util.Set;
 
 /**
- * @Author: long
- * @Description:
- * @Date: Create in 2018.10.13 19:49
- * @Modified By:
- * @ClassName: com.bjiaolong.mybatis.plugins.MapperCommentGenerator
+ * Author: long
+ * Description:
+ * Date: Create in 2018.10.13 19:49
+ * Modified By:
+ * ClassName: com.bjiaolong.mybatis.plugins.MapperCommentGenerator
  */
 public class MapperCommentGenerator implements CommentGenerator {
     //开始的分隔符，例如mysql为`，sqlserver为[
@@ -33,11 +33,6 @@ public class MapperCommentGenerator implements CommentGenerator {
         return;
     }
 
-    /**
-     * xml中的注释
-     *
-     * @param xmlElement
-     */
     public void addComment(XmlElement xmlElement) {
         xmlElement.addElement(new TextElement("<!--"));
         StringBuilder sb = new StringBuilder();
@@ -63,26 +58,10 @@ public class MapperCommentGenerator implements CommentGenerator {
     }
 
     /**
-     * 删除标记
-     *
-     * @param javaElement
-     * @param markAsDoNotDelete
-     */
-    protected void addJavadocTag(JavaElement javaElement, boolean markAsDoNotDelete) {
-        StringBuilder sb = new StringBuilder();
-        sb.append(" * ");
-        sb.append(MergeConstants.NEW_ELEMENT_TAG);
-        if (markAsDoNotDelete) {
-            sb.append(" do_not_delete_during_merge");
-        }
-        javaElement.addJavaDocLine(sb.toString());
-    }
-
-    /**
      * Example使用
      *
-     * @param innerClass
-     * @param introspectedTable
+     * @param innerClass class
+     * @param introspectedTable table信息
      */
     public void addClassComment(InnerClass innerClass, IntrospectedTable introspectedTable) {
     }
@@ -93,9 +72,9 @@ public class MapperCommentGenerator implements CommentGenerator {
     /**
      * 给字段添加数据库备注
      *
-     * @param field
-     * @param introspectedTable
-     * @param introspectedColumn
+     * @param field 属性
+     * @param introspectedTable table信息
+     * @param introspectedColumn table列信息
      */
     public void addFieldComment(Field field, IntrospectedTable introspectedTable, IntrospectedColumn introspectedColumn) {
         if (StringUtility.stringHasValue(introspectedColumn.getRemarks())) {
@@ -111,8 +90,8 @@ public class MapperCommentGenerator implements CommentGenerator {
     /**
      * Example使用
      *
-     * @param field
-     * @param introspectedTable
+     * @param field 属性
+     * @param introspectedTable table信息
      */
     public void addFieldComment(Field field, IntrospectedTable introspectedTable) {
     }
@@ -122,8 +101,9 @@ public class MapperCommentGenerator implements CommentGenerator {
     }
 
     /**
-     * @param method
-     * @param introspectedTable
+     * 增加方法注释
+     * @param method 方法
+     * @param introspectedTable table信息
      */
     public void addGeneralMethodComment(Method method, IntrospectedTable introspectedTable) {
     }
@@ -131,9 +111,9 @@ public class MapperCommentGenerator implements CommentGenerator {
     /**
      * getter方法注释
      *
-     * @param method
-     * @param introspectedTable
-     * @param introspectedColumn
+     * @param method 方法
+     * @param introspectedTable table信息
+     * @param introspectedColumn table列信息
      */
     public void addGetterComment(Method method, IntrospectedTable introspectedTable, IntrospectedColumn introspectedColumn) {
         StringBuilder sb = new StringBuilder();
@@ -158,9 +138,9 @@ public class MapperCommentGenerator implements CommentGenerator {
     /**
      * setter方法注释
      *
-     * @param method
-     * @param introspectedTable
-     * @param introspectedColumn
+     * @param method 方法
+     * @param introspectedTable table信息
+     * @param introspectedColumn table列信息
      */
     public void addSetterComment(Method method, IntrospectedTable introspectedTable, IntrospectedColumn introspectedColumn) {
         StringBuilder sb = new StringBuilder();
@@ -183,13 +163,6 @@ public class MapperCommentGenerator implements CommentGenerator {
         method.addJavaDocLine(" */");
     }
 
-    /**
-     * Example使用
-     *
-     * @param innerClass
-     * @param introspectedTable
-     * @param markAsDoNotDelete
-     */
     public void addClassComment(InnerClass innerClass, IntrospectedTable introspectedTable, boolean markAsDoNotDelete) {
     }
 

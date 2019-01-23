@@ -19,11 +19,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @Author: long
- * @Description:
- * @Date: Create in 2018.10.13 19:49
- * @Modified By:
- * @ClassName: com.bjiaolong.mybatis.plugins.TemplateGeneratorPlugin
+ * Author: long
+ * Description:
+ * Date: Create in 2018.10.13 19:49
+ * Modified By:
+ * ClassName: com.bjiaolong.mybatis.plugins.TemplateGeneratorPlugin
  */
 public class TemplateGeneratorPlugin extends PluginAdapter {
 

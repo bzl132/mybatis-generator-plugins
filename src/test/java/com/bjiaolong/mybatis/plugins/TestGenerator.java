@@ -15,22 +15,22 @@ public class TestGenerator {
 
     private File configFile;
 
-    @Before
-    public void before() {
-        //读取mybatis参数
-        configFile = new File("D:\\Project\\Activiti\\mybatisgeneratorplugins\\mybatisGeneratorPlugins\\src\\main\\resources\\generator-mybatis.xml");
+//     @Before
+//     public void before() {
+//         //读取mybatis参数
+//         configFile = new File("D:\\Project\\Activiti\\mybatisgeneratorplugins\\mybatisGeneratorPlugins\\src\\main\\resources\\generator-mybatis.xml");
+//
+// //        configFile = new File("/Users/zhangsiyuan/Documents/MybatisFun/Mybatis-Chapter9-GeneratorPlugin/src/main/resources/mybatisConfig.xml");
+//     }
 
-//        configFile = new File("/Users/zhangsiyuan/Documents/MybatisFun/Mybatis-Chapter9-GeneratorPlugin/src/main/resources/mybatisConfig.xml");
-    }
-
-    @Test
-    public void test() throws Exception{
-        List<String> warnings = new ArrayList<String>();
-        boolean overwrite = true;
-        ConfigurationParser cp = new ConfigurationParser(warnings);
-        Configuration config = cp.parseConfiguration(configFile);
-        DefaultShellCallback callback = new DefaultShellCallback(overwrite);
-        MyBatisGenerator myBatisGenerator = new MyBatisGenerator(config, callback, warnings);
-        myBatisGenerator.generate(null);
-    }
+    // @Test
+    // public void test() throws Exception{
+    //     List<String> warnings = new ArrayList<String>();
+    //     boolean overwrite = true;
+    //     ConfigurationParser cp = new ConfigurationParser(warnings);
+    //     Configuration config = cp.parseConfiguration(configFile);
+    //     DefaultShellCallback callback = new DefaultShellCallback(overwrite);
+    //     MyBatisGenerator myBatisGenerator = new MyBatisGenerator(config, callback, warnings);
+    //     myBatisGenerator.generate(null);
+    // }
 }
